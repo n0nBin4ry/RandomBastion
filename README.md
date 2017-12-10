@@ -7,6 +7,10 @@ Make a procedurally generated game where player(s) try to get as far as they cou
 ## Game Story/Flavor
 - As Bastion wanders throught the black forrest, they come across a secret organization that is based in the forrest trying to revive the Omnic Crisis along with the help of their own robotic replications of other Heroes/Villains from the world.
 	- Oh yeah I know the game so far seems like an endless roguelike, it still might be (so Bastion always fails lol), but also there might be an eventual Final Boss leading to an ending.
+	
+# Developer Notes/Thoughts/Etc.
+- I believe that the final/future versions will have better quality of play with my current ideas on the chopping block. But even though I am more a developer I want it to be fun and will certainly go through an experiment only phase towards the homestretch of the alpha build. So stay tuned.
+- Also I want to note that I did want to be a good amount farther in the game by this point. But school (finals are my current bane) does take a lot of time and chunks out of my schedule. When school ends, development speed will increase two-fold.
 
 # Current Version v0.3(Alpha) 12/9/17
 - The main gameplay features for the player are now implemented for the most part.
