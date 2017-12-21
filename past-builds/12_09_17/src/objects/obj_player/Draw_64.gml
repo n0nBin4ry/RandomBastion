@@ -5,37 +5,13 @@
 //		 the GUI HUD for player. Would clean up code and shrink size of obj_player
 //		 constructor. ALSO could be helpful if I want poer-ups in the future.
 
-// the gui width and height are set to ideal width and height already, so just storing
-// these values for calculations here
-var screen_w = obj_display_manager.ideal_width;
-var screen_h = obj_display_manager.ideal_height;
-
-/* NOTE: 
-*	- The sprites were originally set for a static GUI size of 960 x 540 so
-*	now that I am trying to have dynamic resolution for the GUI, I am taking all
-*	the previous x-pos or y-pos of the sprites then dividing it by the previous
-*	static GUI width or height to get a percentage of where sprite was in prev
-*	GUI. Then multiply that percentage with the current dynamic GUI width or height.
-*	- First draw function after this note has the orginal values commented just to compare.
-*	- For scaling values, I noticed leaving at how they were made sprites too big 
-*	since the sprites were made for a 950 x 540 GUI, but the dynamic GUI is set to
-*	be scaled off of 320 x (whichever width is calculated). SO my method to get the
-*	right scaling was to get the width or height of sprite then divide it by the 
-*	corresponding width or height of the prev static GUI resolution. Then subtract
-*	the percentage from a whole (1) and that was the scale to use. Works nicely for
-*	now but later games will have a better system in mind
-
-UPDATE: 
-	- Instead set the GUI to be scaled to 
-*/
-
-// draw healthBar to scale of current health
-draw_sprite_ext(spr_healthBar, 0, 34/*0.0354167 * screen_w*/, 481/* 0.861111 * screen_h*/, /*200*/ /*0.792 * */ max(0, hp / maxHp), 1 /*0.946*/, 0, c_white, .95);
+// draw healthBar to scale of xurrent health
+draw_sprite_ext(spr_healthBar, 0, 34, 481, max(0, hp / maxHp), 1, 0, c_white, .95);
 // draw armorBar to scale of current armor
-draw_sprite_ext(spr_armorBar, 0, 231 /*0.240625 * screen_w*/, 481/* 0.861111 * screen_h*/, /*100*/ /*0.89583 * */ max(0, armor / maxArmor), 1 /*0.946*/, 0, c_white, .95);
+draw_sprite_ext(spr_armorBar, 0, 231, 481, max(0, armor / maxArmor), 1, 0, c_white, .95);
 
 // draw big part of GUI
-draw_sprite_ext(spr_GUI_back, 0, 0, 0, 1 /*screen_w / sprite_get_width(spr_GUI_back)*/, 1 /*screen_h / sprite_get_height(spr_GUI_back)*/, 0, c_white, 1);
+draw_sprite(spr_GUI_back, 0, 0, 0);
 
 // draw a little logo at bottom right to show gun type of current mode
 var gl_sprite;
